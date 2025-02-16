@@ -22,13 +22,13 @@ metadata:
 spec:
   storageClassName: standard
   accessModes:
-    - ReadWriteMany      # kitne pod mai use karne hai
+    - ReadWriteOnce     # kitne pod mai use karne hai
   resources:
     requests:
       storage: 2Gi # Storage request matches the PV capacity
 ---
 apiVersion: apps/v1
-kind: Deloyment
+kind: Deployment
 metadata:
   name: mongodbb
 spec:
